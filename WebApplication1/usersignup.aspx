@@ -37,7 +37,7 @@
                             <div class="col-md-6">
                                 <label>Full Name</label>
                                 <div class="form-group my-2">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Full name">
+                                    <asp:TextBox CssClass="form-control" ID="tb_fullname" runat="server" placeholder="Full name">
                                     </asp:TextBox>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@
                             <div class="col-md-6">
                                 <label>Date Of Birth</label>
                                 <div class="form-group my-2">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="dd-mm-yyyy">
+                                    <asp:TextBox CssClass="form-control" ID="tb_dob" runat="server" placeholder="dd-mm-yyyy">
                                     </asp:TextBox>
                                 </div>
                             </div>
@@ -55,7 +55,7 @@
                             <div class="col-md-6">
                                 <label>Contact Number</label>
                                 <div class="form-group my-2">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Contact Number" TextMode="Number">
+                                    <asp:TextBox CssClass="form-control" ID="tb_contact" runat="server" placeholder="Contact Number" TextMode="Number">
                                     </asp:TextBox>
                                 </div>
                             </div>
@@ -63,7 +63,7 @@
                             <div class="col-md-6">
                                 <label>Email ID</label>
                                 <div class="form-group my-2">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox11" runat="server" placeholder="Email ID" TextMode="Email">
+                                    <asp:TextBox CssClass="form-control" ID="tb_email" runat="server" placeholder="Email ID" TextMode="Email">
                                     </asp:TextBox>
                                 </div>
                             </div>
@@ -73,7 +73,7 @@
                             <div class="col-md-4">
                                 <label>State</label>
                                 <div class="form-group my-2">
-                                    <asp:DropDownList class="form-control" ID="DropDownList1" runat="server">
+                                    <asp:DropDownList class="form-control" ID="ddl_state" runat="server">
                                         <asp:ListItem Text="Select" Value="select" />
                                         <asp:ListItem Text="Andhra Pradesh" Value="Andhra Pradesh" />
                                         <asp:ListItem Text="Arunachal Pradesh" Value="Arunachal Pradesh" />
@@ -112,7 +112,7 @@
                             <div class="col-md-4">
                                 <label>City</label>
                                 <div class="form-group my-2">
-                                    <asp:TextBox class="form-control" ID="TextBox8" runat="server" placeholder="City">
+                                    <asp:TextBox class="form-control" ID="tb_city" runat="server" placeholder="City">
                                     </asp:TextBox>
                                 </div>
                             </div>
@@ -120,7 +120,7 @@
                             <div class="col-md-4">
                                 <label>Pin Code</label>
                                 <div class="form-group my-2">
-                                    <asp:TextBox class="form-control" ID="TextBox9" runat="server" placeholder="Pin Code" TextMode="Number">
+                                    <asp:TextBox class="form-control" ID="tb_pinCode" runat="server" placeholder="Pin Code" TextMode="Number">
                                     </asp:TextBox>
                                 </div>
                             </div>
@@ -131,7 +131,7 @@
                             <div class="col">
                                 <label>Full Address</label>
                                 <div class="form-group my-2">
-                                    <asp:TextBox class="form-control" ID="TextBox7" runat="server" placeholder="Full Address" TextMode="MultiLine">
+                                    <asp:TextBox class="form-control" ID="tb_address" runat="server" placeholder="Full Address" TextMode="MultiLine">
                                     </asp:TextBox>
                                 </div>
                             </div>
@@ -149,7 +149,7 @@
                             <div class="col-md-6">
                                 <label>User ID</label>
                                 <div class="form-group my-2">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="User ID">
+                                    <asp:TextBox CssClass="form-control" ID="tb_memberID" runat="server" placeholder="User ID">
                                     </asp:TextBox>
                                 </div>
                             </div>
@@ -157,14 +157,14 @@
                             <div class="col-md-6">
                                 <label>Password</label>
                                 <div class="form-group my-2">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Password">
+                                    <asp:TextBox CssClass="form-control" ID="tb_password" runat="server" placeholder="Password">
                                     </asp:TextBox>
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group d-grid gap-2 my-3">
-                            <asp:Button class="btn btn-success" ID="Button1" runat="server" Text="Sign Up"></asp:Button>
+                            <asp:Button class="btn btn-success" ID="btn_signUp" runat="server" Text="Sign Up" OnClick="btn_signUp_Click"></asp:Button>
                         </div>
 
                     </div>
