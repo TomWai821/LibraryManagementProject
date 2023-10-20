@@ -13,5 +13,55 @@ namespace WebApplication1
         {
 
         }
+
+        protected void LinkBtn_adminLog_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("adminLogin.aspx");
+        }
+
+        protected void LinkBtn_authorMan_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("adminAuthorManagement.aspx");
+        }
+
+        protected void LinkBtn_publisherMan_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("adminPublisherManagement.aspx");
+        }
+
+        protected void LinkBtn_bookInv_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("adminBookInventory.aspx");
+        }
+
+        protected void LinkBtn_bookIss_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("adminBookIssuing.aspx");
+        }
+
+        protected void LinkBtn_memberMan_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("adminMemberManagement.aspx");
+        }
+
+        protected void LinkBtn_viewBooks_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("adminMemberManagement.aspx");
+        }
+
+        protected void LinkBtn_userLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("userLogin.aspx");
+        }
+
+        protected void LinkBtn_signUp_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("userSignup.aspx");
+        }
+
+        protected void LinkBtn_profile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("userProfile.aspx");
+        }
     }
 }

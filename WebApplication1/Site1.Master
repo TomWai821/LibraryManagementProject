@@ -5,7 +5,7 @@
 <html>
 
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
 
     <%--bootstrap css--%>
@@ -14,7 +14,7 @@
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
     <%--fontawesome css--%>
     <link href="fontawesome/css/all.css" rel="stylesheet" />
-     <%--our custom css--%>
+    <%--our custom css--%>
     <link href="css/customStyleSheet.css" rel="stylesheet" />
 
     <%--boostrap bundle js--%>
@@ -23,7 +23,7 @@
     <script src="bootstrap/js/popper.min.js"></script>
     <%--bootstrap js--%>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -31,9 +31,9 @@
 <body>
     <form id="form1" runat="server">
 
-       <div class="container-fluid">
+        <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="homepage.aspx">
                     <img src="imgs/books.png" width="30" height="30" />
                     E-Library
                 </a>
@@ -42,7 +42,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="homepage.aspx">Home</a>
@@ -57,72 +57,70 @@
                     </ul>
                 </div>
                 <ul class="navbar-nav d-flex">
-                    <li class="nav-item active">
-                        <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server">View Books</asp:LinkButton>
-                    </li>
-                        
-                    <li class="nav-item active">
-                        <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server">User Login</asp:LinkButton>
-                    </li>
-                    <li class="nav-item active">
-                        <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server">Sign Up</asp:LinkButton>
-                    </li>
-                    <li class="nav-item active">
-                        <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server">Logout</asp:LinkButton>
-                    </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkBtn_viewBooks" runat="server" OnClick="LinkBtn_viewBooks_Click">View Books</asp:LinkButton>
+                        </li>
 
-                    <li class="nav-item active">
-                        <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server">Hello user</asp:LinkButton>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkBtn_userLogin" runat="server" OnClick="LinkBtn_userLogin_Click">User Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkBtn_signUp" runat="server" OnClick="LinkBtn_signUp_Click">Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkBtn_logout" runat="server">Logout</asp:LinkButton>
+                        </li>
 
-                    </li>
-                </ul>
-
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkBtn_profile" runat="server" OnClick="LinkBtn_profile_Click">Hello user</asp:LinkButton>
+                        </li>
+                    </ul>
             </nav>
         </div>
 
         <!-- Main Content Placeholder -->
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-
             </asp:ContentPlaceHolder>
-       </div>
+        </div>
 
         <!-- Main Content Placeholder -->
-       <!-- Footer -->
-       <footer>
-           <div id="footer1" class="container-fluid">
-               <div class="row">
-                   <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                       <p>
-                           <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server">Admin Login</asp:LinkButton>
-                           &nbsp;
-                           <asp:LinkButton class="footerlinks" ID="LinkButton11" runat="server" Visible="false">Author Management</asp:LinkButton>
-                           &nbsp;
-                           <asp:LinkButton class="footerlinks" ID="LinkButton12" runat="server" Visible="false">Publisher Management</asp:LinkButton>
-                           &nbsp;
-                           <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" Visible="false">Book Inventory</asp:LinkButton>
-                           &nbsp;
-                           <asp:LinkButton class="footerlinks" ID="LinkButton9" runat="server" Visible="false">Book Issuing</asp:LinkButton>
-                           &nbsp;
-                           <asp:LinkButton class="footerlinks" ID="LinkButton10" runat="server" Visible="false">Member Management</asp:LinkButton>
-                           &nbsp;
-                       </p>
+        <!-- Footer -->
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton class="footerlinks" ID="LinkBtn_adminLog" runat="server" OnClick="LinkBtn_adminLog_Click">Admin Login</asp:LinkButton>
+                            &nbsp;
+                           <asp:LinkButton class="footerlinks" ID="LinkBtn_authorMan" runat="server" OnClick="LinkBtn_authorMan_Click" Visible="false">Author Management</asp:LinkButton>
+                            &nbsp;
+                           <asp:LinkButton class="footerlinks" ID="LinkBtn_publisherMan" runat="server" OnClick="LinkBtn_publisherMan_Click" Visible="false">Publisher Management</asp:LinkButton>
+                            &nbsp;
+                           <asp:LinkButton class="footerlinks" ID="LinkBtn_bookInv" runat="server" OnClick="LinkBtn_bookInv_Click" Visible="false">Book Inventory</asp:LinkButton>
+                            &nbsp;
+                           <asp:LinkButton class="footerlinks" ID="LinkBtn_bookIss" runat="server" OnClick="LinkBtn_bookIss_Click" Visible="false">Book Issuing</asp:LinkButton>
+                            &nbsp;
+                           <asp:LinkButton class="footerlinks" ID="LinkBtn_memberMan" runat="server" OnClick="LinkBtn_memberMan_Click" Visible="false">Member Management</asp:LinkButton>
+                            &nbsp;
+                        </p>
 
-                   </div>
-               </div> 
+                    </div>
+                </div>
 
-               </div>
-               <div id="footer2" class="container-fluid">
-                   <div class="row">
-                       <div class="text-center">
-                           <p style="color:whitesmoke">&copy All right Reversed.
+            </div>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="text-center">
+                        <p style="color: whitesmoke">
+                            &copy All right Reversed.
                                <a class="footerlinks" href="#" target="_blank">Simple Snippets</a>
-                           </p>
-                        </div>
-                   </div>
-               </div>
-           
-       </footer>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
     </form>
 </body>
 
