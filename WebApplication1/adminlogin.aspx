@@ -36,19 +36,19 @@
                         <div class="row">
                             <div class="col">
 
-                                <label>Email</label>
+                                <label>Admin ID</label>
                                 <div class="form-group my-2">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Email" TextMode="Email">
+                                    <asp:TextBox CssClass="form-control" ID="tb_adminID" runat="server" placeholder="ID">
                                     </asp:TextBox>
                                 </div>
 
                                 <label>Password</label>
                                 <div class="form-group my-2">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password">
+                                    <asp:TextBox CssClass="form-control" ID="tb_adminPassword" runat="server" placeholder="Password" TextMode="Password">
                                     </asp:TextBox>
 
                                     <div class="form-group d-grid gap-2 my-3">
-                                        <asp:Button class="btn btn-success" ID="Button1" runat="server" Text="Login"></asp:Button>
+                                        <asp:Button class="btn btn-success" ID="btn_adminLogin" runat="server" Text="Login" OnClick="btn_adminLogin_Click"></asp:Button>
                                     </div>
                                 </div>
 

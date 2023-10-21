@@ -37,21 +37,21 @@
                             <div class="col">
                                 <label>Member ID</label>
                                 <div class="form-group my-2">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Member ID">
+                                    <asp:TextBox CssClass="form-control" ID="tb_userID" runat="server" placeholder="Member ID">
                                     </asp:TextBox>
                                 </div>
 
                                 <label>Password</label>
                                 <div class="form-group my-2">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password">
+                                    <asp:TextBox CssClass="form-control" ID="tb_password" runat="server" placeholder="Password" TextMode="Password">
                                     </asp:TextBox>
 
                                     <div class="form-group d-grid gap-2 my-2">
-                                        <asp:Button class="btn btn-success" ID="Button1" runat="server" Text="Login"></asp:Button>
+                                        <asp:Button class="btn btn-success" ID="btn_login" runat="server" Text="Login" OnClick="btn_login_Click"></asp:Button>
                                     </div>
 
                                     <div class="form-group d-grid gap-2 my-2">
-                                        <input id="Button2" class="btn btn-info" type="button" value="Sign Up" />
+                                        <input id="btn_signUp" class="btn btn-info" type="button" value="Sign Up" />
                                     </div>
                                 </div>
                             </div>
