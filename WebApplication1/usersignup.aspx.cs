@@ -41,10 +41,10 @@ namespace WebApplication1
                 {
                     connection.Open();
                 }
-
+                
                 SqlCommand cmd = new SqlCommand("INSERT INTO member_master_table(full_name, dob, contact_no, email, state, city, pincode, full_address, member_id, password, account_status)" +
                     " VALUES (@full_name, @dob, @contact_no, @email, @state, @city, @pincode, @full_address, @member_id, @password, @account_status)", connection);
-
+                
                 //ddl = DropDownList, tb = TextBox
                 cmd.Parameters.AddWithValue("@full_name", tb_fullname.Text.Trim());
                 cmd.Parameters.AddWithValue("@dob", tb_dob.Text.Trim());
@@ -57,10 +57,11 @@ namespace WebApplication1
                 cmd.Parameters.AddWithValue("@member_id", tb_memberID.Text.Trim());
                 cmd.Parameters.AddWithValue("@password", tb_password.Text.Trim());
                 cmd.Parameters.AddWithValue("@account_status", "pending");
-
+                
                 cmd.ExecuteNonQuery();
                 connection.Close();
                 Response.Write("<script>alert('Sign Up Successfully. Go to user Login to Login')</script>");
+                Response.Redirect("homepage.aspx");
             }
             catch (Exception exception)
             {

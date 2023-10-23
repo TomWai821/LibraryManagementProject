@@ -41,7 +41,11 @@ namespace WebApplication1
                     while (sqlDataReader.Read())
                     {
                         // Get Row 8(Username) data
-                        Response.Write("<script>alert('" + sqlDataReader.GetValue(0).ToString() + "');</script>");
+                        //Response.Write("<script>alert('Login Successful');</script>");
+
+                        Session["username"] = sqlDataReader.GetString(0).ToString();
+                        Session["fullname"] = sqlDataReader.GetString(2).ToString();
+                        Session["role"] = "admin";
                     }
                 }
                 else
