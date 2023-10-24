@@ -76,6 +76,7 @@
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="bootstrap\js\jquery-3.7.1.min.js" />
     <Content Include="bootstrap\js\popper.min.js" />
     <Content Include="css\customStyleSheet.css" />
     <Content Include="datatables\css\jquery.dataTables.min.css" />

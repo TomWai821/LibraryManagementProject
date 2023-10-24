@@ -157,7 +157,7 @@
                             <div class="col-md-6">
                                 <label>Password</label>
                                 <div class="form-group my-2">
-                                    <asp:TextBox CssClass="form-control" ID="tb_password" runat="server" placeholder="Password">
+                                    <asp:TextBox CssClass="form-control" ID="tb_password" runat="server" placeholder="Password" >
                                     </asp:TextBox>
                                 </div>
                             </div>

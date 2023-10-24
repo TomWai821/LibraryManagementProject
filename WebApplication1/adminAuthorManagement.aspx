@@ -1,7 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="adminAuthorManagement.aspx.cs" Inherits="WebApplication1.adminAuthorManagement" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+        });
+    </script>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="container">
@@ -37,9 +43,9 @@
                                 <label>Author ID</label>
                                 <div class="form-group my-2">
                                     <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="ID">
+                                        <asp:TextBox CssClass="form-control" ID="tb_authorID" runat="server" placeholder="ID">
                                         </asp:TextBox>
-                                        <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Go" />
+                                        <asp:Button class="btn btn-primary" ID="btn_Go" runat="server" Text="Go" OnClick="btn_Go_Click"/>
                                     </div>
                                 </div>
                             </div>
@@ -47,23 +53,23 @@
                             <div class="col-md-8">
                                 <label>Author Name</label>
                                 <div class="form-group my-2">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Author Name">
+                                    <asp:TextBox CssClass="form-control" ID="tb_authorName" runat="server" placeholder="Author Name">
                                     </asp:TextBox>
                                 </div>
                             </div>
 
 
 
-                            <div class="col d-grid my-3">
-                                <asp:Button class="btn btn-success" ID="Button2" runat="server" Text="Add" />
+                             <div class="col d-grid my-3">
+                                <asp:Button class="btn btn-success" ID="btn_Add" runat="server" Text="Add" OnClick="btn_Add_OnClick"/>
                             </div>
 
                             <div class="col d-grid my-3">
-                                <asp:Button class="btn btn-warning" ID="Button3" runat="server" Text="Update" />
+                                <asp:Button class="btn btn-warning" ID="btn_Update" runat="server" Text="Update"  OnClick="btn_Update_OnClick"/>
                             </div>
 
                             <div class="col d-grid my-3">
-                                <asp:Button class="btn btn-danger" ID="Button4" runat="server" Text="Delete" />
+                                <asp:Button class="btn btn-danger" ID="btn_Delete" runat="server" Text="Delete"  OnClick="btn_Delete_OnClick"/>
                             </div>
                         </div>
                     </div>
@@ -89,8 +95,9 @@
                         </div>
 
                         <div class="row">
+                            <asp:SqlDataSource ID="Author_SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:eLibraryDBConnectionString1 %>" SelectCommand="SELECT * FROM [author_master_table]"></asp:SqlDataSource>
                             <div class="col">
-                                <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
+                                <asp:GridView class="table table-striped table-bordered" ID="author_GridView" runat="server" DataSourceID="Author_SqlDataSource"></asp:GridView>
                             </div>
                         </div>
                     </div>

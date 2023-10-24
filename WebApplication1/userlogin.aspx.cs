@@ -25,7 +25,7 @@ namespace WebApplication1
             try
             {
                 SqlConnection connection = new SqlConnection(strCon);
-                if(connection.State == System.Data.ConnectionState.Closed)
+                if(connection.State == ConnectionState.Closed)
                 {
                     connection.Open();
                 }

@@ -25,7 +25,7 @@ namespace WebApplication1
             try
             {
                 SqlConnection connection = new SqlConnection(strCon);
-                if (connection.State == System.Data.ConnectionState.Closed)
+                if (connection.State == ConnectionState.Closed)
                 {
                     connection.Open();
                 }
@@ -47,6 +47,7 @@ namespace WebApplication1
                         Session["fullname"] = sqlDataReader.GetString(2).ToString();
                         Session["role"] = "admin";
                     }
+                    Response.Redirect("homepage.aspx");
                 }
                 else
                 {

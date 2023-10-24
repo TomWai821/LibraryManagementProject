@@ -17,12 +17,16 @@
     <%--our custom css--%>
     <link href="css/customStyleSheet.css" rel="stylesheet" />
 
+    <%--jQuery js--%>
+    <script src="bootstrap/js/jquery-3.7.1.min.js"></script>
     <%--boostrap bundle js--%>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <%--popper js--%>
     <script src="bootstrap/js/popper.min.js"></script>
     <%--bootstrap js--%>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <%--dataTable js --%>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
