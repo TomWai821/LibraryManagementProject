@@ -91,6 +91,36 @@ namespace WebApplication1
             }
         }
 
+        void deleteMemberByID() {
+            if (checkIfMemberExist())
+            {
+                try
+                {
+                    SqlConnection connection = new SqlConnection(connectionString);
+                    if (connection.State == ConnectionState.Closed)
+                    {
+                        connection.Open();
+                    }
+
+                    SqlCommand cmd = new SqlCommand("DELETE FROM member_master_table WHERE member_id ='" + tb_memberID.Text.Trim() + "';", connection);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+
+                    clearForm();
+                    memberData_GridView.DataBind();
+                    Response.Write("<script>alert('Member Deleted Successfully');</script>");
+                }
+                catch (Exception exception)
+                {
+                    Response.Write("<script>alert('" + exception.Message.ToString() + "');</script>");
+                }
+            }
+            else {
+                Response.Write("<script>alert('Invalid Member ID');</script>");
+            }
+               
+        }
+
         bool checkIfMemberExist()
         {
             try
@@ -122,37 +152,6 @@ namespace WebApplication1
                 return false;
             }
         }
-
-        void deleteMemberByID() {
-            if (checkIfMemberExist())
-            {
-                try
-                {
-                    SqlConnection connection = new SqlConnection(connectionString);
-                    if (connection.State == ConnectionState.Closed)
-                    {
-                        connection.Open();
-                    }
-
-                    SqlCommand cmd = new SqlCommand("DELETE FROM member_master_table WHERE member_id ='" + tb_memberID.Text.Trim() + "';", connection);
-                    cmd.ExecuteNonQuery();
-                    connection.Close();
-
-                    clearForm();
-                    memberData_GridView.DataBind();
-                    Response.Write("<script>alert('Member Deleted Successfully');</script>");
-                }
-                catch (Exception exception)
-                {
-                    Response.Write("<script>alert('" + exception.Message.ToString() + "');</script>");
-                }
-            }
-            else {
-                Response.Write("<script>alert('Invalid Member ID');</script>");
-            }
-               
-        }
-
         void clearForm() {
             tb_fullName.Text = "";
             tb_AccountState.Text = "";

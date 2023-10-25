@@ -73,6 +73,7 @@
     <Content Include="adminlogin.aspx" />
     <Content Include="adminMemberManagement.aspx" />
     <Content Include="adminPublisherManagement.aspx" />
+    <Content Include="book_inventory\books1.png" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
@@ -2161,6 +2162,7 @@
     <Content Include="userLogin.aspx" />
     <Content Include="userProfile.aspx" />
     <Content Include="userSignup.aspx" />
+    <Content Include="viewbooks.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -2242,6 +2244,13 @@
     </Compile>
     <Compile Include="userSignup.aspx.designer.cs">
       <DependentUpon>userSignup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewbooks.aspx.cs">
+      <DependentUpon>viewbooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewbooks.aspx.designer.cs">
+      <DependentUpon>viewbooks.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

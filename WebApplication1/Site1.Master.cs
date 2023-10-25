@@ -64,7 +64,7 @@ namespace WebApplication1
             }
             catch (Exception exception)
             { 
-
+                Response.Write("<script>alert('"+ exception.Message.ToString() +"')</script>");
             }
         }
 
@@ -100,7 +100,7 @@ namespace WebApplication1
 
         protected void LinkBtn_viewBooks_Click(object sender, EventArgs e)
         {
-            Response.Redirect("adminMemberManagement.aspx");
+            Response.Redirect("viewbooks.aspx");
         }
 
         protected void LinkBtn_userLogin_Click(object sender, EventArgs e)
