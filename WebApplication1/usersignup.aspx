@@ -45,7 +45,7 @@
                             <div class="col-md-6">
                                 <label>Date Of Birth</label>
                                 <div class="form-group my-2">
-                                    <asp:TextBox CssClass="form-control" ID="tb_dob" runat="server" placeholder="dd-mm-yyyy">
+                                    <asp:TextBox CssClass="form-control" ID="tb_dob" runat="server" placeholder="dd-mm-yyyy" TextMode="Date">
                                     </asp:TextBox>
                                 </div>
                             </div>

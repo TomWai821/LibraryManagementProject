@@ -152,6 +152,7 @@ namespace WebApplication1
                 return false;
             }
         }
+
         void clearForm() {
             tb_fullName.Text = "";
             tb_AccountState.Text = "";

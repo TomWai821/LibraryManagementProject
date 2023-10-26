@@ -103,7 +103,6 @@ namespace WebApplication1
                     global_current_stock = Convert.ToInt32(dataTable.Rows[0]["current_stock"].ToString().Trim());
                     global_issued_books = global_actual_stock - global_current_stock;
                     global_file_path = dataTable.Rows[0]["book_img_link"].ToString();
-                    Response.Write("<script>alert('"+ global_file_path +"')</script>");
                 }
                 else {
                     Response.Write("<script>alert('Invalid Book ID');</script>");

@@ -36,7 +36,7 @@
                                 <label>Publisher ID</label>
                                 <div class="form-group my-2">
                                     <div class="input-group">
-                                        <asp:TextBox CssClass="form-control" ID="tb_publisherID" runat="server" placeholder="ID" OnTextChanged="tb_publisherID_TextChanged">
+                                        <asp:TextBox CssClass="form-control" ID="tb_publisherID" runat="server" placeholder="ID">
                                         </asp:TextBox>
                                         <asp:Button class="btn btn-primary" ID="btnGo" runat="server" Text="Go" OnClick="btnGo_Click" />
                                     </div>

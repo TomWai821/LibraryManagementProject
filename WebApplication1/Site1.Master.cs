@@ -14,11 +14,12 @@ namespace WebApplication1
         {
             try
             {
-                if (Session["role"] == null)
+                if (Session["role"] == null || Session["role"].Equals(""))
                 {
                     LinkBtn_userLogin.Visible = true;      // User login Link Button 
                     LinkBtn_signUp.Visible = true;         // User sign up Link Button
-                                                           
+
+                    LinkBtn_viewBooks.Visible = false;
                     LinkBtn_logout.Visible = false;        // User logout Link Button
                     LinkBtn_helloUser.Visible = false;     // User Profile Link Button
                                                            
@@ -34,6 +35,7 @@ namespace WebApplication1
                     LinkBtn_userLogin.Visible = false;     // User login link Button 
                     LinkBtn_signUp.Visible = false;        // User sign up Button
 
+                    LinkBtn_viewBooks.Visible = true;
                     LinkBtn_logout.Visible = true;         // User logout link Button
                     LinkBtn_helloUser.Visible = true;      // User Profile link Button
                     LinkBtn_helloUser.Text = "Hello " + Session["username"].ToString();
@@ -50,6 +52,7 @@ namespace WebApplication1
                     LinkBtn_userLogin.Visible = false;     // User login link Button 
                     LinkBtn_signUp.Visible = false;        // User sign up Button
 
+                    LinkBtn_viewBooks.Visible = true;
                     LinkBtn_logout.Visible = true;         // User logout link Button
                     LinkBtn_helloUser.Visible = true;      // User Profile link Button
                     LinkBtn_helloUser.Text = "Hello Admin";
@@ -120,6 +123,11 @@ namespace WebApplication1
 
         protected void LinkBtn_logout_Click(object sender, EventArgs e)
         {
+            logout();
+        }
+
+        void logout() {
+
             Session["username"] = "";
             Session["fullname"] = "";
             Session["role"] = "";
@@ -128,6 +136,7 @@ namespace WebApplication1
             LinkBtn_userLogin.Visible = true;      // User login Link Button 
             LinkBtn_signUp.Visible = true;         // User sign up Link Button
 
+            LinkBtn_viewBooks.Visible = false;
             LinkBtn_logout.Visible = false;        // User logout Link Button
             LinkBtn_helloUser.Visible = false;     // User Profile Link Button
 
@@ -137,6 +146,7 @@ namespace WebApplication1
             LinkBtn_bookInv.Visible = false;       // Book Inventory Link Button
             LinkBtn_bookIss.Visible = false;       // Book Issuing Link Button
             LinkBtn_memberMan.Visible = false;     // Member management Link Button
+            Response.Redirect("homepage.aspx");
         }
     }
 }
